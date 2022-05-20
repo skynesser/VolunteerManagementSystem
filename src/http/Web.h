@@ -11,20 +11,24 @@
 #include <time.h>
 #include <winsock2.h>
 #include <io.h>
+#include "..\volunteer\Volunteer.h"
 #pragma comment(lib,"ws2_32.lib")
 
 int logo();
 int serverSocketInit();
+char* handleURI(char *URI,char *file);
 
-void handleRequestMessage(char* message, int socket);
-void Get(char *URI,int socket);
-void Post(char *URI,char *message,int socket);
-
-int inquireFile( char *URI);
 int sendInfo(int socket,  char* sendBuf, int length);
 void sendFile(int socket,  char *URI);
 char* judgeFileType( char* URI);
-char* handleURL(char *URI);
+
+void handleRequestMessage(char* message, int socket);
+
+void Get(char *URI,int socket);
+
+void Post(char *URI,char *message,int socket);
+
+void handleValue(char *value);
 
 
 

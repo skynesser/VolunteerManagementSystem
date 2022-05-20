@@ -1,18 +1,18 @@
 #include "Web.h"
 
-char method[BUF_SIZE];
-char URI[BUF_SIZE];
-char version[BUF_SIZE];
+
 
 
 void handleRequestMessage(char* message, int socket) {
 
-
+    char method[BUF_SIZE];
+    char URI[BUF_SIZE];
+    char version[BUF_SIZE];
 
     if (sscanf(message, "%s %s %s", method, URI, version) != 3) {
         printf("Request line error!\n");
 
-    }   //提取"请求方法"、"URL"、"HTTP版本"三个关键要素
+    }   //提取"请求方法"、"URI"、"HTTP版本"三个关键要素
 
     printf("%s %s %s\n",method,URI,version);
 

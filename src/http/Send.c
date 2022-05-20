@@ -1,6 +1,7 @@
 #include "Web.h"
 
 void sendFile(int socket,  char *URI) {
+
     //200 OK响应
 
      char* File_ok_line = "HTTP/1.1 200 OK\r\n";
@@ -17,6 +18,7 @@ void sendFile(int socket,  char *URI) {
     if (judgeFileType(URI) == ERROR) {
         printf("The request file's type from client's request message is error!\n");
     }
+
     file = fopen(URI, "rb");
     if (file != NULL) {
         fstat(fileno(file), &file_stat);
@@ -25,8 +27,6 @@ void sendFile(int socket,  char *URI) {
         if (sendInfo(socket, File_ok_line, strlen(File_ok_line)) == ERROR) {
             printf("Sending file_ok_line error!\n");
         }
-
-
 
 
         File_ok_type = judgeFileType(URI);
@@ -76,8 +76,6 @@ void sendFile(int socket,  char *URI) {
     //文件类型判断
      char* suffix;
 
-
-
     if ((suffix = strrchr(URI, '.')) != NULL)
         suffix = suffix + 1;
 
@@ -86,6 +84,9 @@ void sendFile(int socket,  char *URI) {
     }
     else if (strcmp(suffix, "html") == 0) {
         return "Content-type: text/html\r\n";
+    }
+    else if (strcmp(suffix, "txt") == 0) {
+        return "Content-type: text/plain\r\n";
     }
     else
         return ERROR;

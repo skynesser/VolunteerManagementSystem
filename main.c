@@ -1,12 +1,13 @@
-#include "http/Web.h"
+#include "src/http/Web.h"
 
 
 int main() {
     //实现主要功能
+
     SOCKET ServerSock, MessageSock;
     struct sockaddr_in ClientAddr;
-    int rval, Length;
-    char revbuf[BUF_SIZE];
+    int result, Length;
+    char revBuf[BUF_SIZE];
 
     logo();
     printf("Web Server 1.0 is starting......\n\n");
@@ -15,8 +16,8 @@ int main() {
 
     while (OK) {
         /* 启动监听 */
-        rval = listen(ServerSock, BACKLOG);
-        if (rval == SOCKET_ERROR) {
+        result = listen(ServerSock, BACKLOG);
+        if (result == SOCKET_ERROR) {
             printf("Failed to listen socket!\n");
             system("pause");
             exit(1);
@@ -34,14 +35,14 @@ int main() {
         printf("Succeed to accept connection from [%s:%d] !\n\n", inet_ntoa(ClientAddr.sin_addr), ntohs(ClientAddr.sin_port));
 
         /* 接收客户端请求数据 */
-        memset(revbuf, 0, BUF_SIZE);    //每一个字节都用0来填充
-        rval = recv(MessageSock, revbuf, BUF_SIZE, 0);
-        revbuf[rval] = 0x00;
-        if (rval <= 0)
+        memset(revBuf, 0, BUF_SIZE);    //每一个字节都用0来填充
+        result = recv(MessageSock, revBuf, BUF_SIZE, 0);
+        revBuf[result] = 0x00;
+        if (result <= 0)
             printf("Failed to receive request message from client!\n");
         else {
-            printf("%s\n", revbuf); //输出请求数据内容
-            handleRequestMessage(revbuf, MessageSock);
+            printf("%s\n", revBuf); //输出请求数据内容
+            handleRequestMessage(revBuf, MessageSock);
         }
 
         closesocket(MessageSock);
@@ -49,8 +50,8 @@ int main() {
     }
 
     closesocket(ServerSock);    //关闭套接字
-    WSACleanup();   //停止Winsock
+    WSACleanup();
 
-    return OK;
+    return 0;
 }
 

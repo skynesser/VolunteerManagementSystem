@@ -1,5 +1,6 @@
 #include "Web.h"
 
+
 int serverSocketInit() {
     //初始化和构造套接字
     WORD versionRequested;
