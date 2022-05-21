@@ -47,7 +47,10 @@ int selectVolunteer(struct Volunteer volunteers[],int length,char *condition){
             idx = 0;
         }else if(*p == '&'){
             s[idx] = '\0';
-            strcpy(standard[type],s);
+            for(int i = 0 ; i <= idx ; i++){
+                standard[type][i] = s[i];
+            }
+            idx = 0;
         }else{
             s[idx++] = *p;
         }
@@ -56,6 +59,10 @@ int selectVolunteer(struct Volunteer volunteers[],int length,char *condition){
     s[idx] = '\0';
 
     strcpy(standard[type],s);
+
+    for(int i = 0 ; i < TYPE ; i++){
+        printf("type:%d %s\n",i,standard[i]);
+    }
 
     idx = 0;
 
