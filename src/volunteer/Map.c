@@ -1,6 +1,6 @@
 #include "Volunteer.h"
 
-int mapToInt(char *src){
+int mapVolunteerToInt(char *src){
 
     if(strcmp(src,"name")==0){
         return 0;
@@ -27,7 +27,7 @@ int mapToInt(char *src){
     }
 }
 
-char *mapToString(int type){
+char *mapVolunteerToString(int type){
     if(type == 0){
         return "name";
     }else if(type == 1){
@@ -52,4 +52,41 @@ char *mapToString(int type){
         return "";
     }
 
+}
+
+int mapRaceToInt(char *src){
+    if(strcmp("raceName",src) == 0){
+        return 0;
+    }else if(strcmp("raceData",src) == 0){
+        return 1;
+    }else if(strcmp("raceCountry",src) == 0){
+        return 2;
+    }else if(strcmp("raceMAXPerson",src) == 0){
+        return 3;
+    }else{
+        return -1;
+    }
+}
+
+char *mapStringRaceToInt(int type){
+    if(type == 0){
+        return "raceName";
+    }else if(type == 1){
+        return "raceData";
+    }else if(type == 2){
+        return "raceCountry";
+    }else if(type == 3){
+        return "raceMAXPerson";
+    }else{
+        return "";
+    }
+}
+
+int map(char *src){
+    int num = 0;
+    for(char *p = src ; *p != '\0' ; p++){
+        num *= 10;
+        num += (*p - '\0');
+    }
+    return num;
 }

@@ -16,7 +16,6 @@
 
 int logo();
 int serverSocketInit();
-char* handleURI(char *URI,char *file);
 
 int sendInfo(int socket,  char* sendBuf, int length);
 void sendFile(int socket,  char *URI);
@@ -29,6 +28,10 @@ void Get(char *URI,int socket);
 void Post(char *URI,char *message,int socket);
 
 void handleValue(char *value);
+void handleRaceValue(char *value);
+void handleAgeValue(char *value);
+
+
 
 
 

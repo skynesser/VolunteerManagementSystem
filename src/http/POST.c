@@ -3,7 +3,7 @@
 void Post(char *URI,char* message,int socket) {
     if(strcmp(URI,"/") == 0){
 
-        URI = "../src/VolunteerInfo.txt";
+        URI = "../src/volunteerInfo.txt";
 
         sendFile(socket,URI);
 
@@ -15,11 +15,13 @@ void Post(char *URI,char* message,int socket) {
 
         printf("\n\nPost Value: %s\n\n", suffix);
 
-        FILE *fp = fopen("../src/VolunteerInfo.txt","a");
+        FILE *fp = fopen("../src/volunteerInfo.txt","a");
 
         fprintf(fp,"%s\n",suffix);
 
         fclose(fp);
+
+        assign();
     }else{
         printf("不存在请求路径");
     }

@@ -24,6 +24,7 @@ void sendFile(int socket,  char *URI) {
         fstat(fileno(file), &file_stat);
         itoa(file_stat.st_size, Length, 10);
 
+
         if (sendInfo(socket, File_ok_line, strlen(File_ok_line)) == ERROR) {
             printf("Sending file_ok_line error!\n");
         }
