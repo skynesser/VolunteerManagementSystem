@@ -1,6 +1,8 @@
 #include "Volunteer.h"
 
 
+
+
 int findVolunteer(struct Volunteer volunteers[]) {
     FILE *fp = fopen("../src/volunteerInfo.txt", "r");
     int length = 0;
@@ -119,6 +121,8 @@ int findRace(struct Race races[]) {
 }
 
 int selectRace(struct Race races[],int length,char *condition){
+    int raceName = 0;
+
     char standard[MAXLENGTH];
 
     int flag = 0,idx = 0;

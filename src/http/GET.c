@@ -34,6 +34,8 @@ void Get(char *URI,int socket){
 }
 
 void handleValue(char *value){
+    int name = 0;
+
    struct Volunteer volunteers[MAX];
    char racesName[MAX][MAXLENGTH];
    int volunteerLength;
@@ -92,6 +94,8 @@ void handleValue(char *value){
 }
 
 void handleRaceValue(char *value){
+    int raceName = 0;
+
     struct Race races[MAX];
 
     char volunteersName[MAX][MAXLENGTH];
@@ -130,6 +134,8 @@ void handleRaceValue(char *value){
 }
 
 void handleAgeValue(char *value){
+    int age = 1;
+
     struct Volunteer volunteers[MAX];
     int volunteerLength;
 

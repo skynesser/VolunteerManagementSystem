@@ -1,7 +1,19 @@
 #include "Volunteer.h"
 
 
+
+
 void assign(){
+    int name = 0;
+    int foreignLanguage = 6;
+    int foreignLanguageMastery = 7;
+    int isVolunteered = 8;
+    int volunteerTime = 9;
+    int raceName = 0;
+    int raceData = 1;
+    int raceCountry = 2;
+    int raceMAXPerson = 3;
+
     struct Race races[MAX];
     struct Volunteer volunteers[MAX];
     struct RaceAssignment raceAssignment[MAX];
@@ -12,7 +24,6 @@ void assign(){
 
     volunteerLength = findVolunteer(volunteers);
 
-    printf("%d %da\n",raceLength,volunteerLength);
 
     int suitability[raceLength][volunteerLength];
 
@@ -70,4 +81,5 @@ void assign(){
     fclose(fp2);
 
 }
+
 

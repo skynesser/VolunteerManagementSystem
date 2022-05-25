@@ -6,24 +6,6 @@
 #define TYPE 10
 #define RACE 4
 
-#define name 0
-#define age 1
-#define sex 2
-#define contactNumber 3
-#define socialSecurityNumber 4
-#define unitInfo 5
-#define foreignLanguage 6
-#define foreignLanguageMastery 7
-#define isVolunteered 8
-#define volunteerTime 9
-
-#define raceName 0
-#define raceData 1
-#define raceCountry 2
-#define raceMAXPerson 3
-
-
-
 struct Volunteer{
     char field[TYPE][MAXLENGTH];
 };
@@ -53,6 +35,7 @@ int query(char *src,int len);
 void insert(char *src,int len,int val);
 void initTrie();
 void assign();
+
 
 
 
