@@ -75,7 +75,7 @@ void assign(){
         fprintf(fp,"\n");
     }
 
-    printf("assign over\n");
+
 
     fclose(fp);
     fclose(fp2);

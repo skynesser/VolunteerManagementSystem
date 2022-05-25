@@ -61,3 +61,46 @@ int logo() {
     return OK;
 }
 
+int verifyType(char *src,int type){
+
+    int flag = OK;
+
+    FILE *fp = fopen("../src/volunteerRequest.txt","w");
+
+
+    fprintf(fp,"volunteerRequest('{\\\"error\\\":{");
+
+
+    if(strlen(src) == 0){
+
+    }
+    if(type == 0){
+
+    }else if(type == 1){
+
+    }else if(type == 2){
+
+    }else if(type == 3){
+
+    }else if(type == 4){
+
+    }else if(type == 5){
+
+    }else if(type == 6){
+        flag = OK;
+    }else if(type == 7){
+        flag = OK;
+    }else if(type == 8){
+
+    }else if(type == 9){
+
+    }
+
+    fprintf(fp,"}}')");
+
+    fclose(fp);
+
+
+    return flag;
+}
+

@@ -31,6 +31,9 @@ void handleValue(char *value);
 void handleRaceValue(char *value);
 void handleAgeValue(char *value);
 
+int verifyForm(char *value);
+int verifyType(char *src,int type);
+
 
 
 

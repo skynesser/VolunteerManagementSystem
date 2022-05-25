@@ -43,9 +43,17 @@ void sendFile(int socket,  char *URI) {
             }
         }
 
+
+
         if (sendInfo(socket, File_ok_end, strlen(File_ok_end)) == ERROR) {
             printf("Sending file_ok_end error!\n");
         }
+
+        if (sendInfo(socket, File_ok_end, strlen(File_ok_end)) == ERROR) {
+            printf("Sending file_ok_end error!\n");
+        }
+
+
 
         while (file_stat.st_size > 0) {
             if (file_stat.st_size < 1024) {
@@ -73,7 +81,7 @@ void sendFile(int socket,  char *URI) {
 }
 
 
- char* judgeFileType( char *URI) {
+ char* judgeFileType(char *URI) {
     //文件类型判断
      char* suffix;
 
@@ -81,13 +89,13 @@ void sendFile(int socket,  char *URI) {
         suffix = suffix + 1;
 
     if (strcmp(suffix, "json") == 0) {
-        return "Content-type: application/json\r\n";
+        return "Content-type: application/json; charset=utf-8\r\n";
     }
     else if (strcmp(suffix, "html") == 0) {
-        return "Content-type: text/html\r\n";
+        return "Content-type: text/html; charset=utf-8\r\n";
     }
     else if (strcmp(suffix, "txt") == 0) {
-        return "Content-type: text/plain\r\n";
+        return "Content-type: text/plain; charset=utf-8\r\n";
     }
     else
         return ERROR;

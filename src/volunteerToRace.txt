@@ -1,3 +1,2 @@
 name=luojunjie&raceName=basketball
-name=luojunjie&raceName=basketball
-name=luojunjie&raceName=basketball
+name=&raceName=basketball

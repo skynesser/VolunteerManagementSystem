@@ -1,1 +1,1 @@
-raceName=basketball&volunteer=luojunjie,luojunjie,luojunjie
+raceName=basketball&volunteer=luojunjie,

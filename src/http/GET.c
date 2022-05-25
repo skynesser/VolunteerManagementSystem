@@ -1,7 +1,5 @@
 #include "Web.h"
 
-
-
 void Get(char *URI,int socket){
     char *value = NULL;
     char loc[MAX] = {'\0'};
