@@ -1,8 +1,6 @@
 #include "Web.h"
 
 
-
-
 void handleRequestMessage(char* message, int socket) {
 
     char method[BUF_SIZE];
@@ -25,3 +23,4 @@ void handleRequestMessage(char* message, int socket) {
     else
         printf("ÇëÇó·½·¨´íÎó");
 }
+

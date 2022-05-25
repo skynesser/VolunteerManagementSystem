@@ -135,13 +135,15 @@ void handleAgeValue(char *value){
 
     volunteerLength = findVolunteer(volunteers);
 
+
+
     int min,max,flag = 0,idx = 0;
     char s[MAX];
 
     for(char *p = value ; *p != '\0' ; p++){
         if(*p == '='){
             flag = 1;
-        }else if(*p == '~'){
+        }else if(*p == '~' || *p == '-'){
             s[idx] = '\0';
             idx = 0;
             min = map(s);
@@ -154,6 +156,8 @@ void handleAgeValue(char *value){
 
     int index[MAX];
     idx = 0;
+
+//    printf("%d %d\n",min,max);
 
     for(int i = 0 ; i < volunteerLength ; i++){
         int volunteerAge = map(volunteers[i].field[age]);

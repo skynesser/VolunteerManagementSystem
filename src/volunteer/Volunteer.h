@@ -49,6 +49,9 @@ int mapRaceToInt(char *src);
 int map(char *src);
 char *mapVolunteerToString(int type);
 char *mapRaceToString(int type);
+int query(char *src,int len);
+void insert(char *src,int len,int val);
+void initTrie();
 void assign();
 
 

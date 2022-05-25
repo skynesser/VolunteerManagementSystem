@@ -37,7 +37,7 @@ int selectVolunteer(struct Volunteer volunteers[], int length, char *condition) 
     char standard[TYPE][MAXLENGTH];
     char s[MAX];
 
-    printf("%s\n", condition);
+//    printf("%s\n", condition);
 
     memset(standard, 0, sizeof standard);
 
@@ -61,9 +61,9 @@ int selectVolunteer(struct Volunteer volunteers[], int length, char *condition) 
 
     strcpy(standard[type], s);
 
-    for (int i = 0; i < TYPE; i++) {
-        printf("type:%d %s\n", i, standard[i]);
-    }
+//    for (int i = 0; i < TYPE; i++) {
+//        printf("type:%d %s\n", i, standard[i]);
+//    }
 
     idx = 0;
 
