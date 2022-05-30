@@ -1,1 +1,4 @@
-raceName=basketball&volunteer=luojunjie,
+raceName=baseball&volunteer=luojunjie,luojunjie,sss
+raceName=pingpong&volunteer=
+raceName=fencing&volunteer=cscxz
+raceName=shooting&volunteer=

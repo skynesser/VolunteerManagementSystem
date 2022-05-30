@@ -108,6 +108,8 @@ void handleRaceValue(char *value){
 
     volunteerLength = findNameByRace(volunteersName,races[0].field[raceName]);
 
+    printf("volunteer=%d\n",volunteerLength);
+
     FILE *fp = fopen("../src/VolunteerRequest.txt","w");
 
     fprintf(fp,"volunteerRequest('{\\\"volunteer\\\":[");

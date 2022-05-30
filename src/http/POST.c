@@ -18,7 +18,7 @@ void Post(char *URI,char* message,int socket) {
 
         FILE *fp = fopen("../src/volunteerRequest.txt","w");
 
-        fprintf(fp,"submit successfully \r\n");
+        fprintf(fp,"submit successfully");
 
         fclose(fp);
 

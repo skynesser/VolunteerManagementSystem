@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forth</title>
+    <link rel="stylesheet" href="./forth.css">
+</head>
+
+<body>
+    <div class="wapper">
+        <input type="text" placeholder="请输入年龄段" id="age">
+        <input type="button" value="查询" id="btn">
+        <div id="information">
+        </div>
+    </div>
+
+    <script>
+        var q;
+        function volunteerRequest(t) {
+            q = JSON.parse(t);
+            console.log(t);
+            var information = document.getElementById("information");
+            btn.onclick = function () {
+                information.innerHTML = "";
+                var child = '<div class="child">'
+                for (var i = 0; i < q.length; i++) {
+                    child += (i + 1) + ".姓名为:" + q[i].name + '<br>';
+                }
+                child += '</div>';
+                information.innerHTML += child;
+            }
+        }
+        var age = document.getElementById("age");
+        var script = document.createElement("script");  //创建一个script标签
+        script.type = "text/javascript";
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            console.log(age.value);
+            script.src = "http://localhost/age?age=" + age.value;
+            console.log(script.src);
+            document.body.appendChild(script);
+        }       
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forth</title>
+    <link rel="stylesheet" href="./second.css">
+</head>
+
+<body>
+    <div class="wapper">
+        <input type="text" placeholder="请输入比赛" id="race">
+        <input type="button" value="查询" id="btn">
+        <div id="information">
+        </div>
+    </div>
+
+    <script>
+        var q;
+        function volunteerRequest(t) {
+            q = JSON.parse(t);
+            console.log(t);
+            var information = document.getElementById("information");
+            btn.onclick = function () {
+                information.innerHTML = "";
+                var child = '<div class="child">'
+                for (var i = 0; i < q.volunteer.length; i++) {
+                    child += (i + 1) + ".姓名为:" + q.volunteer[i] + '<br>';
+                }
+                child += '</div>';
+                information.innerHTML += child;
+            }
+        }
+        var race = document.getElementById("race");
+        var script = document.createElement("script");  //创建一个script标签
+        script.type = "text/javascript";
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            console.log(race.value);
+            script.src = "http://localhost/race?race=" + race.value;
+            console.log(script.src);
+            document.body.appendChild(script);
+        }       
+    </script>
+</body>
+
+</html>

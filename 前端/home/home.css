@@ -1,0 +1,47 @@
+html {
+    background-color: lightblue;
+}
+
+.top-wapper {
+    height: 100px;
+    margin-top: 60px;
+}
+
+.top-wapper .toper {
+    height: 100px;
+    width: 400px;
+    margin: 0 auto;
+    line-height: 100px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.wapper {
+    width: 300px;
+    margin: 60px auto;
+}
+
+.wapper a div {
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgb(0, 136, 255);
+    margin-bottom: 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.wapper a:hover {
+    color: #ff6700;
+}
+
+.wapper a:focus div {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+}
+
+.wapper a {
+    display: block;
+    color: #DDD;
+}

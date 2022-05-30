@@ -37,7 +37,15 @@ void assign(){
                     suitability[i][j] += 2;
                 }
                 if(strcmp(races[i].field[raceCountry],volunteers[j].field[foreignLanguage]) == 0){
-                    suitability[i][j] += map(volunteers[j].field[foreignLanguageMastery]);
+                    int result;
+                    if(strcmp(volunteers[j].field[foreignLanguageMastery],"high")==0){
+                        result = 3;
+                    }else if(strcmp(volunteers[j].field[foreignLanguageMastery],"middle")==0){
+                        result = 2;
+                    }else{
+                        result = 1;
+                    }
+                    suitability[i][j] += result;
                 }
                 suitability[i][j] += 1;
             }

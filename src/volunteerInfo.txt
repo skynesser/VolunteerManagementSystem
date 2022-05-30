@@ -1,12 +1,4 @@
-name=luojunjie&age=20&sex=boy&contactNumber=1&socialSecurityNumber=1&unitInfo=1&foreignLanguageMastery=1&foreignLanguage=1&isVolunteered=yes&volunteerTime=sdaas
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
-name=&age=&contactNumber=&socialSecurityNumber=&unitInfo=&foreignLanguageMastery=&foreignLanguage=&volunteerTime=
+name=luojunjie&age=20&sex=boy&contactNumber=13858112430&socialSecurityNumber=330822200210331018&unitInfo=hangdian&foreignLanguage=English&foreignLanguageMastery=5&isVolunteered=yes&volunteerTime=6.5
+name=luojunjie&age=20&sex=boy&contactNumber=13858112430&socialSecurityNumber=330822200210331018&unitInfo=hangdian&foreignLanguage=English&foreignLanguageMastery=middle&isVolunteered=yes&volunteerTime=6.5
+name=sss&age=50&sex=boy&contactNumber=13858112430&socialSecurityNumber=330822200210331018&unitInfo=hangdian&foreignLanguage=English&foreignLanguageMastery=middle&isVolunteered=yes&volunteerTime=6.5
+name=cscxz&age=20&sex=boy&contactNumber=13858112430&socialSecurityNumber=330822200210331018&unitInfo=hangdian&foreignLanguage=English&foreignLanguageMastery=middle&isVolunteered=yes&volunteerTime=6.7

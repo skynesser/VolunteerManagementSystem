@@ -1,1 +1,4 @@
-raceName=basketball&raceData=1&raceCountry=1&raceMAXPerson=3
+raceName=baseball&raceData=6.5&raceCountry=English&raceMAXPerson=3
+raceName=pingpong&raceData=6.6&raceCountry=French&raceMAXPerson=2
+raceName=fencing&raceData=6.7&raceCountry=German&raceMAXPerson=1
+raceName=shooting&raceData=6.8&raceCountry=English&raceMAXPerson=2

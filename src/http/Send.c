@@ -25,33 +25,33 @@ void sendFile(int socket,  char *URI) {
         itoa(file_stat.st_size, Length, 10);
 
 
-        if (sendInfo(socket, File_ok_line, strlen(File_ok_line)) == ERROR) {
-            printf("Sending file_ok_line error!\n");
-        }
-
-
-        File_ok_type = judgeFileType(URI);
-        if (sendInfo(socket, File_ok_type, strlen(File_ok_type)) == ERROR) {
-            printf("Sending file_ok_type error!\n");
-        }
-
-        if (sendInfo(socket, File_ok_length, strlen(File_ok_length)) != ERROR) {
-            if (sendInfo(socket, Length, strlen(Length)) != ERROR) {
-                if (sendInfo(socket, "\n", 1) == ERROR) {
-                    printf("Sending file_ok_length error!\n");
-                }
-            }
-        }
-
-
-
-        if (sendInfo(socket, File_ok_end, strlen(File_ok_end)) == ERROR) {
-            printf("Sending file_ok_end error!\n");
-        }
-
-        if (sendInfo(socket, File_ok_end, strlen(File_ok_end)) == ERROR) {
-            printf("Sending file_ok_end error!\n");
-        }
+//        if (sendInfo(socket, File_ok_line, strlen(File_ok_line)) == ERROR) {
+//            printf("Sending file_ok_line error!\n");
+//        }
+//
+//
+//        File_ok_type = judgeFileType(URI);
+//        if (sendInfo(socket, File_ok_type, strlen(File_ok_type)) == ERROR) {
+//            printf("Sending file_ok_type error!\n");
+//        }
+//
+//        if (sendInfo(socket, File_ok_length, strlen(File_ok_length)) != ERROR) {
+//            if (sendInfo(socket, Length, strlen(Length)) != ERROR) {
+//                if (sendInfo(socket, "\n", 1) == ERROR) {
+//                    printf("Sending file_ok_length error!\n");
+//                }
+//            }
+//        }
+//
+//
+//
+//        if (sendInfo(socket, File_ok_end, strlen(File_ok_end)) == ERROR) {
+//            printf("Sending file_ok_end error!\n");
+//        }
+//
+//        if (sendInfo(socket, File_ok_end, strlen(File_ok_end)) == ERROR) {
+//            printf("Sending file_ok_end error!\n");
+//        }
 
 
 
@@ -89,13 +89,13 @@ void sendFile(int socket,  char *URI) {
         suffix = suffix + 1;
 
     if (strcmp(suffix, "json") == 0) {
-        return "Content-type: application/json; charset=utf-8\r\n";
+        return "Content-type: application/json\r\n";
     }
     else if (strcmp(suffix, "html") == 0) {
-        return "Content-type: text/html; charset=utf-8\r\n";
+        return "Content-type: text/html\r\n";
     }
     else if (strcmp(suffix, "txt") == 0) {
-        return "Content-type: text/plain; charset=utf-8\r\n";
+        return "Content-type: text/plain\r\n";
     }
     else
         return ERROR;

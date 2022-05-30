@@ -152,10 +152,12 @@ int findRaceByName(char racesName[][MAXLENGTH],char *src){
 
     int length = 0;
 
+    printf("%s\n",src);
 
     while(!feof(fp)){
         char temp[MAX],s[MAX];
         fscanf(fp,"%s",temp);
+        if(strlen(temp) == 0)break;
         int flag = 0,idx = 0,i = 0;
         for(; temp[i] != '&' ; i++){
             if(temp[i] == '='){
@@ -178,11 +180,13 @@ int findRaceByName(char racesName[][MAXLENGTH],char *src){
                 }
             }
         }
-
+//        s[idx] = '\0';
+//        printf("%s\n",s);
         if(flag){
             s[idx] = '\0';
             strcpy(racesName[length++],s);
         }
+        memset(temp,0,sizeof temp);
     }
 
     fclose(fp);
@@ -198,8 +202,11 @@ int findNameByRace(char volunteersName[][MAXLENGTH],char *src){
     char temp[MAX],s[MAX];
 
 
+
     while(!feof(fp)){
         fscanf(fp,"%s",temp);
+        printf("%s\n",temp);
+        if(strlen(temp) == 0)break;
         i = 0,flag = 0,idx = 0;
         for(; temp[i] != '&' ; i++){
             if(temp[i] == '='){
@@ -224,10 +231,16 @@ int findNameByRace(char volunteersName[][MAXLENGTH],char *src){
                 }
             }
         }
+        if(flag){
+            s[idx] = '\0';
+            strcpy(volunteersName[length++],s);
+        }
+
+        memset(temp,0,sizeof temp);
     }
 
-    s[idx] = '\0';
-    strcpy(volunteersName[length++],s);
+
+
 
     fclose(fp);
 

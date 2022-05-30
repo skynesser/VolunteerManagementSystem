@@ -1,2 +1,4 @@
-name=luojunjie&raceName=basketball
-name=&raceName=basketball
+name=luojunjie&raceName=baseball
+name=luojunjie&raceName=baseball
+name=sss&raceName=baseball
+name=cscxz&raceName=fencing

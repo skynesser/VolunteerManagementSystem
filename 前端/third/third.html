@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>third</title>
+    <link rel="stylesheet" href="./third.css">
+</head>
+
+<body>
+    <!-- 外部容器 -->
+    <div class="wapper">
+        <input type="text" placeholder="请输入查询人姓名" id="name">
+        <input type="button" value="查询" id="btn">
+        <div id="information">
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        function volunteerRequest(t) {
+            q = JSON.parse(t);
+            console.log(q[0].name);
+            var information = document.getElementById("information");
+            btn.onclick = function () {
+                information.innerHTML = "";
+                var child = '<div class="child"'
+                child += "姓名为:" + q[0].name + "<br>";
+                child += "年龄为:" + q[0].age + "<br>";
+                if (q[0].sex == "boy") {
+                    child += "性别为:男<br>";
+                }
+                else {
+                    child += "性别为:女<br>";
+                }
+                child += "联系电话为:" + q[0].contactNumber + "<br>";
+                child += "身份证号为:" + q[0].socialSecurityNumber + "<br>";
+                child += "单位信息为:" + q[0].unitInfo + "<br>";
+                child += "掌握外语为:" + q[0].foreignLanguageMastery + "<br>";
+                child += "掌握情况为:" + q[0].foreignLanguage + "<br>";
+                child += "是否担任过志愿者:";
+                if (q[0].isVolunteered == "yes") {
+                    child += "是<br>";
+                }
+                else {
+                    child += "否<br>";
+                }
+                child += "志愿时间为:" + q[0].volunteerTime + "<br>";
+                child += "志愿比赛为:" + q[0].race;
+                child += '</div>';
+                information.innerHTML += child;
+            }
+        }
+        btn.onclick = function () {
+            var name = document.getElementById("name");
+            console.log(name.value);
+            var script = document.createElement("script");  //创建一个script标签
+            script.type = "text/javascript";
+            script.src = "http://localhost?name=" + name.value;
+            console.log(script.src);
+            document.body.appendChild(script);
+        }
+
+    </script>
+</body>
+
+</html>

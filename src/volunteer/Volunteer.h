@@ -6,9 +6,11 @@
 #define TYPE 10
 #define RACE 4
 
+
 struct Volunteer{
     char field[TYPE][MAXLENGTH];
 };
+
 
 struct Race{
     char field[RACE][MAXLENGTH];
